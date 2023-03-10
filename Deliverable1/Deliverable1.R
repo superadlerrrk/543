@@ -38,5 +38,18 @@ crime <- crime[complete_rows, ]
 sum(is.na(crime$"Reported Time"))
 sum(is.na(crime$"Occurred Time"))
 
+# absolute values
+absoluteT=table(crime$Precinct)
+
+absoluteT
+
+# relative values
+prop.table(absoluteT)
+
+ptgT=prop.table(absoluteT)*100
+ptgT
+
+pie(absoluteT,cex=0.6)
+
 
 
